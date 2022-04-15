@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+
+@font-face {
+    font-family: "Gordita";
+    font-weight: 400;
+    src: url(/assets/fonts/gordita/Gordita-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: "Gordita Medium";
+    font-weight: 500;
+    src: url(/assets/fonts/gordita/Gordita-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: "Gordita Bold";
+    font-weight: 600;
+    src: url(/assets/fonts/gordita/Gordita-Bold.woff) format("woff");
+}
+
+body {
+    @apply font-gordita text-[#475B77];
+}
+
+@tailwind utilities;
