@@ -10,6 +10,7 @@ module.exports = {
         'gordita': ['Gordita', 'sans-serif'],
         'gordita-medium': ['Gordita Medium', 'sans-serif'],
         'gordita-bold': ['Gordita Bold', 'sans-serif'],
+        'gordita-light': ['Gordita Light', 'sans-serif'],
       },
     },
   },

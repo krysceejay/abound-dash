@@ -67,12 +67,12 @@ const Dashboard: NextPage<Props> = ({children, title}) => {
                         <ul>
                             <li className="rounded-md px-6 py-4">
                                 <Link href="/dashboard">
-                                    <div className="flex items-center space-x-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                        <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                                    </svg>
+                                    <a className="flex items-center space-x-5">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                        </svg>
                                         <span className="text-sm">Dashboard</span>
-                                    </div>
+                                    </a>
                                 </Link>
                             </li>
                             <li className="bg-[#F6F8FF] text-[#0070C5] rounded-md px-6 py-4">
@@ -134,7 +134,7 @@ const Dashboard: NextPage<Props> = ({children, title}) => {
                     <span className="text-xs">Talk with an online agent</span>
                 </div>
             </aside>
-            <main className="py-8 px-4 md:p-8 text-2xl font-bold flex-1 ml-0 md:ml-18 lg:ml-64">
+            <main className="p-8 text-2xl font-bold flex-1 ml-0 md:ml-18 lg:ml-64">
                 {children}
             </main>
             </div>
