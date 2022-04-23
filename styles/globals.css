@@ -30,4 +30,8 @@ body {
     @apply font-gordita text-[#475B77] bg-[#E5E5E5];
 }
 
+table thead {
+    border-radius: 3px !important;
+  }
+
 @tailwind utilities;
