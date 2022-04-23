@@ -10,14 +10,14 @@ const Employees: NextPage = () => {
             <header className="flex items-center justify-between py-[22px] border-b border-[#EFEFEF]">
               <div>
                 <input 
-                className="appearance-none border rounded p-3 focus:outline-none focus:shadow-outline h-10 w-[250px] text-sm"
+                className="appearance-none border rounded p-3 focus:outline-none h-10 w-[250px] text-sm"
                 type="text"
                 placeholder="Search Employees" />
               </div>
               <div className="flex items-center space-x-5">
                 <span className="text-sm font-bold">Add Employee(s)</span>
                 <div className="flex items-center space-x-2.5">
-                  <Link href="/dashboard">
+                  <Link href="/employees/add-single-record">
                     <a className="text-[#0D70BF] text-xs px-4 py-2.5 border border-[#0D70BF] rounded-[3px] flex items-center space-x-2">
                       <div className="w-5 h-5">
                         <img src="/assets/img/add-user.png" alt="Wave" className="w-full h-full object-contain" />
@@ -25,7 +25,7 @@ const Employees: NextPage = () => {
                       <span className="text-sm">Single Record</span>
                     </a>
                   </Link>
-                  <Link href="/dashboard">
+                  <Link href="/employees/upload-bulk-record">
                     <a className="text-[#0D70BF] text-xs px-4 py-2.5 border border-[#0D70BF] rounded-[3px] flex items-center space-x-2">
                       <div className="w-5 h-5">
                         <img src="/assets/img/add-users.png" alt="Wave" className="w-full h-full object-contain" />
