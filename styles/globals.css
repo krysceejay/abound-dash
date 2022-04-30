@@ -32,6 +32,10 @@ body {
 
 table thead {
     border-radius: 3px !important;
-  }
+}
+
+.show {
+    transform: translateX(0) !important;
+}
 
 @tailwind utilities;
