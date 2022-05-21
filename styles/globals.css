@@ -30,6 +30,12 @@ body {
     @apply font-gordita text-[#475B77] bg-[#E5E5E5];
 }
 
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+    -webkit-tap-highlight-color: transparent;
+  }
+
 table thead {
     border-radius: 3px !important;
 }

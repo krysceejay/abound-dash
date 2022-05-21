@@ -1,6 +1,20 @@
-import React from 'react'
+import {useState} from 'react'
+
+import TabNav from './TabNav'
+import Tab from './Tab'
 
 const EmployeeDetails = () => {
+    const [tab, setTab] = useState('Employment Details')
+    const [isDeactivated, setDeActivateBtn] = useState(false)
+
+    const setSelected = (t: string) => {
+        setTab(t)
+    }
+
+    const handleSwitch = () => {
+        setDeActivateBtn(prev => !prev)
+    }
+
   return (
     <section>
         <div className="py-5 border border-[#EFEFEF] rounded">
@@ -39,6 +53,77 @@ const EmployeeDetails = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <span className="text-xs">4th Floor, Grand Square Towers, Central Business District. Abuja, Nigeria</span>
+            </div>
+        </div>
+        <div className="mt-5">
+            <TabNav tabs={["Employment Details", "Bank Details", "Next-of-Kin"]} selected={tab} setSelected={setSelected}>
+                <Tab isSelected={tab === "Employment Details"}>
+                    <div className="py-1 px-7 border border-[#EFEFEF] rounded">
+                        <div className="flex items-center border-b border-[#EFEFEF] pb-4">
+                            <div className="flex-1">
+                                <div className="text-[10px] font-gordita-light">Level</div>
+                                <div className="text-xs">Senior</div>
+                            </div>
+                            <div className="flex-1">
+                                <div className="text-[10px] font-gordita-light">Status</div>
+                                <div className="text-xs">Fulltime</div>
+                            </div>
+                        </div>
+                        <div className="border-b border-[#EFEFEF] py-4">
+                            <div className="text-[10px] font-gordita-light">Employment Date</div>
+                            <div className="text-xs">Mar. 21st, 2022</div>
+                        </div>
+                        <div className="border-b border-[#EFEFEF] py-4">
+                            <div className="text-[10px] font-gordita-light">Net Salary</div>
+                            <div className="text-xs">General IT Services</div>
+                        </div>
+                        <div className="py-4">
+                            <div className="text-[10px] font-gordita-light">Salary Percentage for Benefits</div>
+                            <div className="text-xs">2%</div>
+                        </div>
+                    </div>
+                </Tab>
+                <Tab isSelected={tab === "Bank Details"}>
+                    <div className="py-1 px-7 border border-[#EFEFEF] rounded">
+                        <div className="border-b border-[#EFEFEF] py-4">
+                            <div className="text-[10px] font-gordita-light">Bank Account Number</div>
+                            <div className="text-xs">2345678906</div>
+                        </div>
+                        <div className="py-4">
+                            <div className="text-[10px] font-gordita-light">Bank Name</div>
+                            <div className="text-xs">Aminu Garba</div>
+                        </div>
+                    </div>
+                </Tab>
+                <Tab isSelected={tab === "Next-of-Kin"}>
+                    <div className="py-1 px-7 border border-[#EFEFEF] rounded">
+                        <div className="border-b border-[#EFEFEF] py-4">
+                            <div className="text-[10px] font-gordita-light">Full Name</div>
+                            <div className="text-xs">Dennis Emma</div>
+                        </div>
+                        <div className="border-b border-[#EFEFEF] py-4">
+                            <div className="text-[10px] font-gordita-light">Relationship</div>
+                            <div className="text-xs">Brother</div>
+                        </div>
+                        <div className="border-b border-[#EFEFEF] py-4">
+                            <div className="text-[10px] font-gordita-light">Phone</div>
+                            <div className="text-xs">+2346545677890</div>
+                        </div>
+                        <div className="py-4">
+                            <div className="text-[10px] font-gordita-light">Email</div>
+                            <div className="text-xs">dennisemma@gmail.com</div>
+                        </div>
+                    </div>
+                </Tab>
+            </TabNav>
+        </div>
+        <div className="border-b border-[#EFEFEF] mt-8" />
+        <div className="p-6 border border-[#EFEFEF] rounded flex items-center justify-between my-8">
+            <span className="text-xs">Deactivate Employee</span>
+            <div className="w-[32px] h-[20px] cursor-pointer" onClick={handleSwitch}>
+                {isDeactivated ? 
+                <img src="/assets/img/on-button.png" alt="Switch On" className="w-full h-full object-cover" /> :
+                <img src="/assets/img/off-button.png" alt="Switch Off" className="w-full h-full object-cover" /> }
             </div>
         </div>
     </section>
