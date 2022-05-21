@@ -10,28 +10,28 @@ const Employees: NextPage = () => {
   const cartRef = useRef<HTMLElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
 
-  const hideCart = () => {
+  const hideDetails = () => {
     cartRef.current?.classList.remove("show")  
     overlayRef.current?.classList.add("hide")
   }
 
-  const showCart = () => {
+  const showDetails = () => {
    cartRef.current?.classList.add("show")  
    overlayRef.current?.classList.remove("hide")  
   }
 
     return (
-      <Layout title="Home Page">
+      <Layout title="Employee List">
         <div>
             <div className="overlay hide" ref={overlayRef}></div>
             <section className="bg-white block fixed top-14 right-0 max-w-md w-full h-full z-30 translate-x-full transition-transform duration-500 ease-in-out overflow-hidden shadow-employee-box" id="slide-cart" ref={cartRef}>
                 <div className="px-8 py-6 h-full">
-                  <div className="cursor-pointer grid" onClick={hideCart}>
+                  <div className="cursor-pointer grid" onClick={hideDetails}>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 justify-self-end" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
-                  <div className="overflow-y-scroll mt-4">
+                  <div className="overflow-y-scroll h-[90%] mt-4">
                       <EmployeeDetails />
                   </div>
                 </div>
@@ -116,7 +116,7 @@ const Employees: NextPage = () => {
                     <input type="checkbox" />
                     <span 
                     className="text-[#0D70BF] cursor-pointer font-bold" 
-                    onClick={() => showCart()}>
+                    onClick={() => showDetails()}>
                       Aruna Michael
                     </span>
                   </td>
@@ -128,7 +128,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -138,7 +143,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="bg-[#F8F9FF]">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -148,7 +158,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -158,7 +173,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="bg-[#F8F9FF]">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -168,7 +188,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -178,7 +203,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="bg-[#F8F9FF]">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -188,7 +218,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -198,7 +233,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="bg-[#F8F9FF]">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -208,7 +248,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -218,7 +263,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="bg-[#F8F9FF]">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
@@ -228,7 +278,12 @@ const Employees: NextPage = () => {
                 </tr>
                 <tr className="">
                   <td data-heading="First Name" className="text-left p-4 break-words border-r-0 border-l-0 flex space-x-2">
-                    <input type="checkbox" /><span>Aruna Michael</span>
+                    <input type="checkbox" />
+                    <span 
+                    className="text-[#0D70BF] cursor-pointer font-bold" 
+                    onClick={() => showDetails()}>
+                      Aruna Michael
+                    </span>
                   </td>
                   <td data-heading="Last Name" className="text-left p-4 break-words border-r-0 border-l-0">Junior</td>
                   <td data-heading="Company" className="text-left p-4 break-words border-r-0 border-l-0">Oct 31, 2017</td>
