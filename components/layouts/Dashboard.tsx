@@ -106,7 +106,7 @@ const Dashboard: NextPage<Props> = ({ children, title }) => {
       <div className="relative min-h-screen flex w-screen overflow-hidden">
         <aside
           className={`filter-block transform lg:-translate-x-full lg:translate-x-0 w-[233px] fixed min-h-[88%] border-r px-4 py-[18px] bg-white my-4 ml-4 rounded-[10px] lg:flex flex-col justify-between ease-in-out duration-300 z-[60] ${
-            isMenuOpen ? " translate-x-0" : " -translate-x-full left-0"
+            isMenuOpen ? " translate-x-0" : " -translate-x-full -left-[20px]"
           }`}
         >
           <div>
