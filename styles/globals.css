@@ -2,46 +2,61 @@
 @tailwind components;
 
 @font-face {
-    font-family: "Gordita";
-    font-weight: 400;
-    font-style: normal;
-    src: url(/assets/fonts/gordita/Gordita-Regular.woff) format("woff");
+  font-family: "Gordita";
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/fonts/gordita/Gordita-Regular.woff) format("woff");
 }
 @font-face {
-    font-family: "Gordita Light";
-    font-weight: 400;
-    font-style: normal;
-    src: url(/assets/fonts/gordita/Gordita-Light.woff) format("woff");
+  font-family: "Gordita Light";
+  font-weight: 400;
+  font-style: normal;
+  src: url(/assets/fonts/gordita/Gordita-Light.woff) format("woff");
 }
 @font-face {
-    font-family: "Gordita Medium";
-    font-weight: 500;
-    font-style: normal;
-    src: url(/assets/fonts/gordita/Gordita-Medium.woff) format("woff");
+  font-family: "Gordita Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: url(/assets/fonts/gordita/Gordita-Medium.woff) format("woff");
 }
 @font-face {
-    font-family: "Gordita Bold";
-    font-weight: 600;
-    font-style: normal;
-    src: url(/assets/fonts/gordita/Gordita-Bold.woff) format("woff");
+  font-family: "Gordita Bold";
+  font-weight: 600;
+  font-style: normal;
+  src: url(/assets/fonts/gordita/Gordita-Bold.woff) format("woff");
 }
 
 body {
-    @apply font-gordita text-[#475B77] bg-[#E5E5E5];
+  @apply font-gordita text-[#475B77] bg-[#E5E5E5];
 }
 
 body {
-    -ms-overflow-style: none;
-    scrollbar-width: none; /* Firefox */
-    -webkit-tap-highlight-color: transparent;
-  }
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+  -webkit-tap-highlight-color: transparent;
+}
 
 table thead {
-    border-radius: 3px !important;
+  border-radius: 3px !important;
 }
 
 .show {
-    transform: translateX(0) !important;
+  transform: translateX(0) !important;
 }
 
 @tailwind utilities;
+
+/* media query for employee table  */
+.scroll-overflow {
+  max-width: calc(100vw - 68px);
+}
+@media only screen and (min-width: 640px) {
+  .scroll-overflow {
+    max-width: calc(100vw - 100px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .scroll-overflow {
+    max-width: calc(100vw - 356px);
+  }
+}

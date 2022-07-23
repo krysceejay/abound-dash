@@ -245,7 +245,7 @@ const Dashboard: NextPage<Props> = ({ children, title }) => {
             <span className="text-xs">Talk with an online agent</span>
           </div>
         </aside>
-        <main className="px-8 text-2xl font-bold flex-1 ml-0 md:ml-18 lg:ml-64 my-4">
+        <main className="sm:px-8 px-4 text-2xl font-bold flex-1 ml-0 md:ml-18 lg:ml-64 my-4">
           {children}
         </main>
       </div>
